@@ -9,14 +9,23 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.8;
             color: #333;
+            background-color: #f9f9f9;
+            text-align: center;
+            font-size: 1.2em; /* Tăng kích thước font chữ toàn bộ trang */
         }
         header {
             background: #4CAF50;
             color: white;
-            padding: 20px 10px;
+            padding: 40px 10px; /* Tăng khoảng padding */
             text-align: center;
+        }
+        header h1 {
+            font-size: 3em; /* Tăng kích thước tiêu đề */
+        }
+        header p {
+            font-size: 1.5em; /* Tăng kích thước chữ mô tả */
         }
         nav {
             background: #333;
@@ -27,82 +36,119 @@
             display: block;
             color: white;
             text-align: center;
-            padding: 14px 16px;
+            padding: 20px 25px; /* Tăng khoảng padding trong nav */
             text-decoration: none;
+            font-size: 1.2em; /* Tăng kích thước font chữ menu */
         }
         nav a:hover {
             background: #ddd;
             color: black;
         }
         section {
-            padding: 20px;
+            padding: 40px 20px;
+            margin: 20px;
+            text-align: left;
+        }
+        section h2 {
+            font-size: 2.5em; /* Tăng kích thước tiêu đề phần */
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        section p {
+            font-size: 1.3em; /* Tăng kích thước văn bản */
+            margin-bottom: 20px;
         }
         .banner img {
             max-width: 100%;
             height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
         }
         .content {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 30px;
             justify-content: center;
         }
         .content div {
             flex: 1 1 300px;
             border: 1px solid #ccc;
-            padding: 15px;
+            padding: 30px;
+            background: white;
             box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .content div img {
+            max-width: 100%;
+            height: auto;
             border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .content div h3 {
+            font-size: 1.8em; /* Tăng kích thước tiêu đề trong các phần hoạt động */
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+        .video-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .video-container iframe {
+            width: 100%;
+            max-width: 1000px; /* Tăng kích thước video */
+            height: 560px; /* Tăng chiều cao của video */
+            border: none;
+        }
+        .additional-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .additional-content img {
+            flex: 1 1 45%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .additional-content p {
+            flex: 1 1 50%;
+            font-size: 1.3em; /* Tăng kích thước chữ phần giới thiệu */
+            line-height: 1.6;
         }
         footer {
             background: #4CAF50;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 30px 10px; /* Tăng khoảng padding trong footer */
+            margin-top: 20px;
         }
-        .video-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .video-container iframe {
-            width: 100%;
-            max-width: 560px;
-            height: 315px;
-            border: none;
-        }
-        .additional-content img {
-            float: left;
-            margin-right: 15px;
-            max-width: 40%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .clear {
-            clear: both;
+        footer p {
+            font-size: 1.2em; /* Tăng kích thước chữ trong footer */
         }
         #capture {
-            margin: 20px auto;
+            margin: 30px auto;
             display: block;
-            padding: 10px 20px;
+            padding: 12px 25px;
             background: #4CAF50;
             color: white;
             border: none;
+            border-radius: 5px;
+            font-size: 1.2em; /* Tăng kích thước chữ nút */
             cursor: pointer;
-            font-size: 16px;
         }
         #capture:hover {
             background: #45a049;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 </head>
 <body>
     <header>
         <h1>Chung Tay Bảo Vệ Môi Trường</h1>
-        <p>Hành động hôm nay để cứu lấy ngày mai</p>
+        <p>Hành động hôm nay để bảo vệ tương lai mai sau</p>
     </header>
 
     <nav>
@@ -113,8 +159,8 @@
     </nav>
 
     <section id="home" class="banner">
-        <img src="images/environment-banner.jpg" alt="Hình ảnh bảo vệ môi trường">
-        <p>Trái đất là ngôi nhà chung của chúng ta. Hãy bảo vệ nó!</p>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.JrTsfyLxPABezm6fhaVEoQHaDF&pid=Api&P=0&h=220.jpg" alt="Hình ảnh bảo vệ môi trường">
+        <p>Trái đất là ngôi nhà duy nhất của chúng ta. Hãy cùng nhau bảo vệ thiên nhiên, giữ cho không khí, nước, và đất luôn trong lành!</p>
     </section>
 
     <section class="video-container">
@@ -122,20 +168,15 @@
         <iframe 
             src="https://www.youtube.com/embed/qetZJiQa-z8" 
             title="Xem Xong Bạn Sẽ Khác | Bảo Vệ Môi Trường - Chống Rác Thải Nhựa" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
         </iframe>
     </section>
 
     <section id="about">
         <h2>Về Chúng Tôi</h2>
-        <p>Chúng tôi là một tổ chức phi lợi nhuận với sứ mệnh nâng cao nhận thức và thúc đẩy các hoạt động bảo vệ môi trường. 
-           Đội ngũ của chúng tôi bao gồm các tình nguyện viên và chuyên gia cam kết mang đến sự thay đổi tích cực cho cộng đồng.</p>
         <div class="additional-content">
-            <img src="images/team-working.jpg" alt="Hình ảnh đội ngũ làm việc">
-            <p>Chúng tôi tổ chức các buổi họp mặt định kỳ để thảo luận các giải pháp bền vững. Với sự hỗ trợ của cộng đồng, chúng tôi đã thực hiện nhiều chiến dịch lớn, từ trồng rừng đến tuyên truyền giáo dục tại các trường học và khu dân cư.</p>
-            <div class="clear"></div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxm31nDjZ9LVDencGNJ_IGZH_AxhdJ-qrJIA&s.jpg" alt="Hình ảnh đội ngũ làm việc">
+            <p>Chúng tôi là một tổ chức phi lợi nhuận tập trung vào việc nâng cao nhận thức cộng đồng về bảo vệ môi trường. Đội ngũ bao gồm những cá nhân đam mê và cam kết thực hiện những thay đổi tích cực. Mục tiêu của chúng tôi là giảm thiểu ô nhiễm và bảo vệ hệ sinh thái để đảm bảo một môi trường sống bền vững cho các thế hệ tương lai.</p>
         </div>
     </section>
 
@@ -144,35 +185,30 @@
         <div class="content">
             <div>
                 <h3>Trồng Cây Xanh</h3>
-                <img src="images/planting-trees.jpg" alt="Hình ảnh trồng cây xanh">
-                <p>Tham gia các chương trình trồng cây xanh để phủ xanh các khu vực bị khai thác quá mức.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BWVneymqtLiXFmj1rKteZK8ZGivlqYIQLw&s.jpg" alt="Hình ảnh trồng cây xanh">
+                <p>Tham gia các chương trình trồng cây để cải tạo những vùng đất cằn cỗi và phục hồi sinh thái. Việc trồng cây xanh sẽ giúp cải thiện chất lượng không khí và tạo môi trường sống trong lành cho động vật hoang dã.</p>
             </div>
             <div>
                 <h3>Thu Gom Rác Thải</h3>
-                <img src="images/cleaning-up.jpg" alt="Hình ảnh thu gom rác thải">
-                <p>Hỗ trợ các chiến dịch làm sạch bãi biển, công viên và khu vực công cộng.</p>
+                <img src="https://cdn.tuoitre.vn/zoom/700_525/471584752817336320/2023/1/15/z4040446600570a60a4f1b164f9da4325595d1eec998d9-1673758063902601258406-260-0-1307-2000-crop-16737633292732118439849.jpg" alt="Hình ảnh thu gom rác thải">
+                <p>Chúng tôi tổ chức thu gom rác tại các bãi biển, công viên và khu vực công cộng để giảm thiểu ô nhiễm. Điều này giúp bảo vệ động vật biển và cải thiện sức khỏe cộng đồng.</p>
             </div>
             <div>
                 <h3>Tuyên Truyền Giáo Dục</h3>
-                <img src="images/education-campaign.jpg" alt="Hình ảnh tuyên truyền giáo dục">
-                <p>Đào tạo và nâng cao nhận thức cộng đồng về bảo vệ môi trường.</p>
+                <img src="https://ninhbinh.edu.vn/upload/19216/20190306/HS_Ve_SINH_MoI_TRuoNG_.jpg" alt="Hình ảnh tuyên truyền giáo dục">
+                <p>Giáo dục trẻ em và cộng đồng về vai trò của việc tái chế và sử dụng các sản phẩm thân thiện với môi trường. Các hoạt động tuyên truyền giúp nâng cao nhận thức và thay đổi thói quen trong việc sử dụng tài nguyên thiên nhiên.</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Liên Hệ</h2>
-        <p>Nếu bạn muốn tham gia cùng chúng tôi hoặc có bất kỳ câu hỏi nào, vui lòng liên hệ:</p>
+        <p>Hãy tham gia cùng chúng tôi để tạo nên sự khác biệt. Mọi thắc mắc xin vui lòng liên hệ:</p>
         <ul>
             <li>Email: info@moitruong.com</li>
             <li>Điện thoại: 0123 456 789</li>
             <li>Địa chỉ: 123 Đường Xanh, Thành phố Xanh</li>
         </ul>
-        <div class="additional-content">
-            <img src="images/contact-team.jpg" alt="Hình ảnh liên hệ">
-            <p>Đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng giải đáp thắc mắc và cung cấp thông tin về các hoạt động của tổ chức. Hãy liên hệ ngay hôm nay để cùng chung tay bảo vệ môi trường.</p>
-            <div class="clear"></div>
-        </div>
     </section>
 
     <button id="capture">Chụp Ảnh Trang Web</button>
@@ -180,16 +216,5 @@
     <footer>
         <p>&copy; 2025 Bảo Vệ Môi Trường. Tất cả các quyền được bảo lưu.</p>
     </footer>
-
-    <script>
-        document.getElementById('capture').addEventListener('click', function () {
-            html2canvas(document.body).then(function (canvas) {
-                var link = document.createElement('a');
-                link.href = canvas.toDataURL();
-                link.download = 'bao-ve-moi-truong.png';
-                link.click();
-            });
-        });
-    </script>
 </body>
 </html>
